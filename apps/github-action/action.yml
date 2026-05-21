@@ -1,0 +1,38 @@
+name: 'DevLens PR Review'
+description: 'AI-powered code review for pull requests. Bring your own AI key.'
+author: 'DevLens'
+
+inputs:
+  ai-provider:
+    description: 'AI provider to use: openai | anthropic | gemini | copilot'
+    required: true
+    default: 'openai'
+  ai-api-key:
+    description: 'API key for your AI provider'
+    required: false
+  github-token:
+    description: 'GitHub token for posting comments'
+    required: true
+    default: ${{ github.token }}
+  review-mode:
+    description: 'What to review: bugs | security | performance | style | full'
+    required: false
+    default: 'full'
+  post-comment:
+    description: 'Whether to post the review as a PR comment'
+    required: false
+    default: 'true'
+
+outputs:
+  review:
+    description: 'The generated review as JSON'
+  risk-level:
+    description: 'Risk level: low | medium | high'
+
+runs:
+  using: 'node20'
+  main: 'action-dist/index.js'
+
+branding:
+  icon: 'code'
+  color: 'blue'

@@ -1,0 +1,22 @@
+{
+  "name": "@devlens/github",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@devlens/core": "workspace:*",
+    "@octokit/rest": "^21.0.0",
+    "@octokit/webhooks": "^13.3.0",
+    "@octokit/auth-app": "^7.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

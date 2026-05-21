@@ -1,0 +1,21 @@
+{
+  "name": "@devlens/ai-providers",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@devlens/core": "workspace:*",
+    "openai": "^4.52.0",
+    "@anthropic-ai/sdk": "^0.27.0",
+    "@google/generative-ai": "^0.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
