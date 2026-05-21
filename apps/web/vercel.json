@@ -1,6 +1,6 @@
 {
   "installCommand": "cd ../.. && pnpm install",
-  "buildCommand": "cd ../.. && pnpm --filter web build",
+  "buildCommand": "cd ../.. && pnpm --filter '@devlens/*' build && pnpm --filter web build",
   "outputDirectory": ".next",
   "framework": "nextjs"
 }
